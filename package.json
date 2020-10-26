@@ -1,24 +1,25 @@
 {
-  "name": "node-express-handlebars-burger",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CoraZhang/Node-Express-Handlebars-burger.git"
-  },
-  "author": "Shihan",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CoraZhang/Node-Express-Handlebars-burger/issues"
-  },
-  "homepage": "https://github.com/CoraZhang/Node-Express-Handlebars-burger#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "express-handlebars": "^5.1.0",
-    "mysql": "^2.18.1"
-  }
+    "name": "node-express-handlebars-burger",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/CoraZhang/Node-Express-Handlebars-burger.git"
+    },
+    "author": "Shihan",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/CoraZhang/Node-Express-Handlebars-burger/issues"
+    },
+    "homepage": "https://github.com/CoraZhang/Node-Express-Handlebars-burger#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "express-handlebars": "^5.1.0",
+        "jshint": "^2.12.0",
+        "mysql": "^2.18.1"
+    }
 }
