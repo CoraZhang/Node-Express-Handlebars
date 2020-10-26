@@ -19,7 +19,7 @@ When trying to connect remotely to your Heroku database on an open network such 
 * The app will store every burger in a database, whether devoured or not.
 
 ## Screenshot
-
+![alt text](Burger.png)
 ## Instructions
 
 #### App File Structure Setup
