@@ -1,0 +1,130 @@
+<div class="row">
+    <div id="addForm" class="col-md-3">
+        <div class="row indexSection">
+            {{!-- Add Form --}}
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Add a Burger</h2>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="create-form">
+                            <div class="form-group">
+                                <label for="name">Burger Name:</label>
+                                <input style="width:100%;" type="text" id="name" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="desc">Burger Description:</label>
+                                <textarea style="width:100%;" rows="5" id="description" name="description"></textarea>
+                            </div>
+                            <p style="color:red;">* Name and Description only accepts letters, numbers, and some special
+                                characters (-.!,&$%?).</p>
+                            <button type="submit" class="btn btn-primary primary">Add</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12"></div>
+        </div>
+    </div>
+
+    <div id="updateForm" class="col-md-3" style="display:none;">
+        <div class="row indexSection">
+            {{!-- Update Form --}}
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Update a Burger</h2>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="update-form">
+                            <input style="display:none;" type="text" id="id1" name="id1">
+                            <div class="form-group">
+                                <label for="name1">Burger Name:</label>
+                                <input style="width:100%;" type="text" id="name1" name="name1">
+                            </div>
+                            <div class="form-group">
+                                <label for="desc">Burger Description:</label>
+                                <textarea style="width:100%;" rows="5" id="description1" name="description1"></textarea>
+                            </div>
+                            <p style="color:red;">* Name and Description only accepts letters, numbers, and some special
+                                characters (!,.-).</p>
+                            <button type="submit" class="btn btn-primary primary">Update</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-9">
+        <div class="row indexSection">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1>Eat Some Burgers!</h1>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row text-center">
+                            <div class="col-md-12">
+                                <h2>Burgers to Devour!</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                {{#each burgers}}
+
+                                {{#unless devoured}}
+                                <div class="card">
+                                    <div class="card-header">
+                                        {{> burgers/burger-block dev=true}}
+                                    </div>
+                                </div>
+                                {{/unless}}
+
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="row text-center">
+                            <div class="col-md-12">
+                                <h2>Devoured!</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                {{#each burgers}}
+                                {{#if devoured}}
+                                <div class="card">
+                                    <div class="card-header">
+                                        {{> burgers/burger-block dev=false}}
+                                    </div>
+                                </div>
+                                {{/if}}
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12"></div>
+        </div>
+    </div>
+
+</div>

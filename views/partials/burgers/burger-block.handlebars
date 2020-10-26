@@ -1,0 +1,29 @@
+<div class="row">
+	<div class="col-md=12 makeCenter text-center">
+		<b>{{#if favorite}}<i class="fas fa-hamburger rainbow"></i>{{else}}<i class="fas fa-caret-right"></i>{{/if}}
+			{{burger_name}}</b><br>
+		{{description}}<br>
+		{{#if devoured}}
+		{{#if favorite}}
+		<button class="favorite btn btn-success" data-id="{{id}}" data-favorite="0">
+			Not Anymore
+		</button>
+		{{else}}
+		<button class="favorite btn btn-success" data-id="{{id}}" data-favorite="1">
+			Favorite
+		</button>
+		{{/if}}
+		<button class="delete btn btn-danger" data-id="{{id}}">
+			Delete
+		</button>
+		{{else}}
+		<button class="change-devour btn btn-secondary" data-id="{{id}}" data-devour="{{dev}}">
+			Devour it
+		</button>
+		{{/if}}
+		<button class="update-this btn btn-primary" data-id="{{id}}" data-name="{{burger_name}}"
+			data-description="{{description}}">
+			Update
+		</button>
+	</div>
+</div>
