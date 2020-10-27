@@ -76,6 +76,7 @@ router.put("/api/burgers/update/:id", (req, res) => {
             if (result.changedRows === 0) {
                 // If no rows were changed, then the ID must not exist, so 404
                 return res.status(404).end();
+
             }
             res.status(200).end();
 
@@ -92,6 +93,11 @@ router.delete("/api/burgers/:id", (req, res) => {
 router.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/error.html"));
 });
+// cannot update
+router.put("*", (req, res) => {
+    //console.log(req.body)
+    res.sendFile(path.join(__dirname, "../public/error.html"));
+})
 
 // Export routes for server.js to use.
 module.exports = router;
