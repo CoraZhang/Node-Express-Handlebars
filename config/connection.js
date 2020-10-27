@@ -2,7 +2,7 @@
 const mysql = require("mysql");
 
 let connection;
-
+// To deploy the app to heroku
 if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {

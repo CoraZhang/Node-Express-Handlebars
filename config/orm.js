@@ -12,7 +12,6 @@ function printQuestionMarks(num) {
     for (let i = 0; i < num; i++) {
         arr.push("?");
     }
-
     return arr.toString();
 }
 
@@ -34,7 +33,6 @@ function objToSql(ob) {
             arr.push(key + "=" + value);
         }
     }
-
     // translate array of strings to a single comma-separated string
     return arr.toString();
 }
@@ -68,8 +66,6 @@ const orm = {
         queryString += "VALUES (";
         queryString += printQuestionMarks(vals.length);
         queryString += ") ";
-
-        //console.log(queryString);
 
         connection.query(queryString, vals, (err, result) => {
             if (err) {
